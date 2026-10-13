@@ -60,10 +60,11 @@ header {
 }
 
 header h1 {
-  font-size: 1em;
+  font-size: 1.3em;
   flex: 1; /* pushes nav to the right */
   white-space: nowrap;
   padding: 0 5vw .5em 0;
+  text-align: center;
 }
 
 nav a:not(:last-of-type) {
@@ -82,8 +83,13 @@ a:hover {
 }
 
 section h1 {
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 0 0 1em 0;
+}
+
+section p {
+  display: inline;
+  margin-left: 4em;
 }
 
 h2, h3, h4 {
