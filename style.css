@@ -1,19 +1,33 @@
-* { margin: 0; padding: 0; box-sizing: border-box;
-  
-  /* Color scheme */
-  
+/* Default Light mode */
+:root {
   --textcolor: #121212;
   --bgcolor: #fff;
   --highlight: #2749c9;
-
 }
 
-@media (prefers-color-scheme: dark) {
-  * {
-    --textcolor: #dadada;
-    --bgcolor: #141414;
-    --highlight: #ffc400;
-  }
+/* Dark mode */
+:root.dark-mode {
+  --textcolor: #dadada;
+  --bgcolor: #141414;
+  --highlight: #ffc400;
+}
+
+#theme-toggle {
+  font: inherit;
+  font-size: 0.85em;
+  color: var(--textcolor);
+  background: transparent;
+  border: 1px solid var(--textcolor);
+  border-radius: 10px;
+  padding: 0.4em 0.8em;
+  cursor: pointer;
+  height: fit-content;
+  min-height: 3em;
+}
+
+#theme-toggle:hover {
+  color: var(--highlight);
+  border-color: var(--highlight);
 }
 
 body {

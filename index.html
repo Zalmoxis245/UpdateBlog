@@ -24,6 +24,7 @@
       <h1>
         <a href="#home">Dev Logs</a>
       </h1>
+      <button id="theme-toggle" type="button" aria-pressed="false">🌙 Dark mode</button>
     </header>
     
     <main>
@@ -33,6 +34,16 @@
       ----------- -->
       
       <section id="home">
+
+        <ul>
+        <h2><a href="#update-2">Update #2</a></h2>
+        <textarea id="addsection" readonly rows="5">
+                        Summary
+-------------------------------------------------------
+    •   Posted previous and current updates on the dev log
+    •   Made some more entries on my Excell sheets
+    •   Played a few survival games</textarea>
+        </ul>
         
         <ul>
         <h2><a href="#update-1">Update #1</a></h2>
@@ -45,32 +56,79 @@
         </ul>
         
       </section>
-      
+      <!-- ----------
+      -- Update #No -
+      ----------- -->
+
+      <section id="update-template">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>Update #Template</h1>
+        <h2 style="margin: 0;">04/Oct/2026</h2>
+        </div>
+      </section>
+
+      <!-- ----------
+      -- Update #2 --
+      ----------- -->
+
+      <section id="update-2">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>Update #2</h1>
+        <h2 style="margin: 0;">11/Oct/2026</h2>
+        </div>
+
+        <br><br>
+
+        <img src="./img/tinifiedFurther/tinyPngLogo.png" style="max-height: 300px;float: right;">
+        <p>
+          Since last week I didn’t have enough time to post an update on my work, I had to postpone 
+          that for this week and also make sure to save enough time for this week’s report. 
+          While making the dev log updates I made sure to use tools like PNG-to-8-bit Converter 
+          (OptimizePNG), TinyPNG, and Paint to compress and size down my images as much as possible, 
+          making my whole website less than 200kb – smaller than a screenshot of it. 
+        </p>
+        <br><br>
+        <p>
+          This is necessary because 
+          this whole website is a single HTML file giving the illusion of multiple pages through sections. 
+          Therefore, all images get loaded all at once, when you load the whole website, so every future size 
+          increase of the website will affect the experience of loading it exponentially. However, this also has the 
+          benefit of feeling lightning fast once loaded while still being fairly well maintainable. 
+        </p>
+
+
+      </section>
+
       <!-- ----------
       -- Update #1 --
       ----------- -->
 
       <section id="update-1">
 
+        <div style="display: flex; justify-content: space-between; align-items: center;">
         <h1>Update #1</h1>
+        <h2 style="margin: 0;">04/Oct/2026</h2>
+        </div>
         <div style="text-align: center;">
-          <img src="./img/tinifiedFurther/Dodeca_Wire.png" style="max-height: 295px;display: inline-block;">
-          <img src="./img/tinifiedFurther/Dodeca_Solid.png" style="max-height: 295px;display: inline-block;">
-          <img src="./img/tinifiedFurther/BCH_ZIN.png" style="max-height: 295px; display: inline-block;">
+          <img src="./img/tinifiedFurther/Dodeca_Wire.png" style="max-height: 285px;display: inline-block;">
+          <img src="./img/tinifiedFurther/Dodeca_Solid.png" style="max-height: 285px;display: inline-block;">
+          <img src="./img/tinifiedFurther/BCH_ZIN.png" style="max-height: 285px; display: inline-block;">
         </div>
         <br>
         <p>
           At the end of April, for my dissertation, I wanted to make a Minecraft/Vintage Story
-            type of game but with dodecahedrons instead of cubes (since they are the next platonic solid 
-          in terms of vertex complexity after the cube, ignoring the octahedrons because I don't like how they look).
+    type of game but with truncated octahedrons instead of cubes (since they are the next space-filling polyhedron 
+          in terms of vertex complexity after the cube; I also thought a truncated octahedron and dodecahedron were
+          different namings for the same thing due to a confusing website, so my Godot project is named "Dodeca World" when
+          it actually has truncated octahedrons in it).
         </p>
         <br>
         <br>
         <img src="./img/tinifiedFurther/BCH_ZOUT.png" style="max-height: 300px; float: right;">
         
         <p>
-          During summer I started working on this idea and managed to make a function that would draw BCH-spaced 
-          (Bitruncated Cubic Honeycomb) dodecahedrons in 32x32x32 chunks in Godot. 
+          During summer I started working on this idea and managed to make a function that would draw BCH-spaced (Honeycomb) 
+          truncated octahedrons in 32x32x32 chunks in Godot. 
           (I wanted to learn a new game engine while doing my dissertation as well)
           </p>
           <br><br>
@@ -80,18 +138,18 @@
           </p>
           <br><br>
           <p>
-            Not to mention unrewarding since at the end of the day I’d have to design a fun game around my generated dodecahedron map 
+            Not to mention unrewarding since at the end of the day I’d have to design a fun game around my generated truncated octahedron map 
             which would’ve been a challenge in itself and the project would’ve probably end up incomplete which is not what a 
             dissertation project should be like.
           </p>
           <br><br><br>
           <p style="margin-left: 0em;">
-          ----------------------------------------------------------------------------------------------------------------------------------------
+          -------------------------------------------------------------------------------------------------------------------------------------
           </p>
           <br><br><br>
           <p>
             Therefore, I thought that the best idea would be to make an easy to complete game, 
-            that I could finish until the end of the year and spend the next one just playtesting and perfecting. 
+            that I could finish until the end of the year and spend the next year just playtesting and perfecting. 
             An easy to complete game would have to be a game that I’d enjoy making, with low complexity and easy to jump 
             into working on it without requiring a big context to add/change something. 
           </p>
@@ -131,7 +189,27 @@
           </div>
           <br><br>
         <p style="margin-left: 0em;">
-          ----------------------------------------------------------------------------------------------------------------------------------------
+          -------------------------------------------------------------------------------------------------------------------------------------
+          </p>
+          <br><br><br>
+          <p>
+            With these types of games I believe it would be best if I were to write down the entities I want my game to have in an Excell
+             spreadsheet first, come up with a story line, perhaps add/change items based on the story requirements, then code the classes
+              and functions for those entities. This way I think I could better visualise the bigger picture and plan ahead instead of
+               starting to code and just add items, entities and mechanics as I go.
+          </p>
+          <br><br>
+          <div style="text-align: center;">
+            <img src="./img/tinifiedFurther/excel1.png" style="max-height: 240px;display: inline-block;">
+            <img src="./img/tinifiedFurther/excel2.png" style="max-height: 240px;display: inline-block;">
+          </div>
+          <br>
+          <p>
+            So far during this update I’ve made 2 Excell spreadsheets detailing a few tools and components my game will have, 
+            inspired mainly from Vintage Story, and I also made a very basic blog website with just a link to this update page, 
+            but the update page wasn’t started yet. Progress as of 04/October. Next up I plan(ned) to finish my first update page 
+            (11/Oct), add either a page or 2 to my Excell file or 20 or so entries with items, and play some story-driven survival 
+            games to get inspired for the story of this game.
           </p>
 
 
@@ -142,6 +220,6 @@
    
 <img src="./img/Surprised-Bigfoot-Cat_50.png">
     
-    
+    <script src="./script.js"></script>
   </body>
 </html>
